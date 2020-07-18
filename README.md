@@ -4,9 +4,9 @@ There is a good amount of content on how SSL works. This was one I [read on medi
 SSL provides many modes of verification of certificates between a client and server during the handshake. Read the details [here](https://www.openssl.org/docs/man1.1.1/man3/SSL_CTX_set_verify.html).
 
 SSL_VERIFY_NONE is the most basic handshake. Here the server will not send a request to the client for its certificate. The server will send a certificate, which the client can verify.
-Here, we just ignore the certificate as it is self-signed. 
+Here, we just ignore the certificate as it is self-signed.
 In this mode of operation, the authenticity of client or server cannot be verified, but we can be assured of secure communication once the handshake is complete.
-
+This mode is open to MITM attack.
 
 # Building the tutorial
 This tutorial requires openssl-dev to be installed in the system
